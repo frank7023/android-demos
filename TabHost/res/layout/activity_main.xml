@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="48dp" 
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:id="@+id/title"
+        android:text="昌大软院"
+        android:textSize="18dp"
+        android:textColor="#a8aeb5"
+        android:typeface="monospace"
+        android:background="@drawable/title_bg" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Done"
+        android:textColor="#a8aeb5"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/done" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back"
+        android:textColor="#a8aeb5"
+        android:text="Back"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        />
+    
+	<FrameLayout
+	     android:id="@+id/content"
+	     android:layout_below="@id/title"
+		 android:layout_width="fill_parent"
+	     android:layout_height="fill_parent"/> 
+	            
+	<RadioGroup
+	    android:id="@+id/main_radio"
+	    android:layout_width="fill_parent"
+	    android:layout_height="48dp"
+	    android:layout_gravity="bottom"
+	    android:orientation="horizontal"
+	    android:layout_alignParentBottom="true"
+	    android:background="@drawable/tabhost_bg" >
+	    <RadioButton
+	        android:id="@+id/rb_home"
+	        android:drawableTop="@drawable/tab1"
+	        style="@style/tab"
+	        android:text="主页" />
+	    <RadioButton
+	        android:id="@+id/rb_at"
+	        style="@style/tab"	        
+	        android:drawableTop="@drawable/tab2"
+	        android:text="收藏夹" />
+	    <RadioButton
+	        android:id="@+id/rb_mess"
+	        style="@style/tab"	        
+	        android:drawableTop="@drawable/tab3"	             
+	        android:text="我" />
+	    <RadioButton
+	        android:id="@+id/rb_more"
+	        style="@style/tab"	        
+	        android:drawableTop="@drawable/tab4"	         
+	        android:text="更多" />	    	    
+	</RadioGroup>
+</RelativeLayout>
