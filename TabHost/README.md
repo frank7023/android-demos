@@ -6,17 +6,20 @@
 布局方面：上面是ActionBar，中间的内容部分采用FragmentLayout，下面的4个Tab采用4个RadioButton的RadioGroup，通过修改样式达到效果。
 
 将布局上的FragmentLayout替换为Fragment：
-> fragmentManager = getSupportFragmentManager();      
-    FragmentTransaction transaction = fragmentManager.beginTransaction(); 
-        transaction.replace(R.id.content, (Fragment)fragment);  
-        transaction.commit();  
-
+```java
+fragmentManager = getSupportFragmentManager();      
+FragmentTransaction transaction = fragmentManager.beginTransaction(); 
+transaction.replace(R.id.content, (Fragment)fragment);  
+transaction.commit();  
+```
 关于切换Tab就是为RadioGroup设置选中改变监听器：
-> radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {  
-        public void onCheckedChanged(RadioGroup group, int checkedId) { 
-          ｝
-        ｝
-
+```java
+radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {  
+    public void onCheckedChanged(RadioGroup group, int checkedId) 
+    { 
+    ｝
+｝
+```
 详细介绍：http://fangjie.info/?p=141
 
 ### 作者:by[@方杰_Jay](http://weibo.com/ncuitstudent) 

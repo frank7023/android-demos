@@ -11,9 +11,10 @@
 * 导航栏下面的指示器根据滑动距离发生变化
 原理就是通过改变指示器与左边的margin值来达到移动的效果  
 
-> LinearLayout.LayoutParams lp= (LinearLayout.LayoutParams) mLine.getLayoutParams();
-  lp.leftMargin=position*ScreenWidth+(int)(positionOffset*ScreenWidth);
-  mLine.setLayoutParams(lp);
-
+```java
+LinearLayout.LayoutParams lp= (LinearLayout.LayoutParams) mLine.getLayoutParams();
+lp.leftMargin=position*ScreenWidth+(int)(positionOffset*ScreenWidth);
+mLine.setLayoutParams(lp);
+```
 详细介绍：http://fangjie.info/
 ### 作者:by[@方杰_Jay](http://weibo.com/ncuitstudent) 
