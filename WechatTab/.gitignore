@@ -1,1 +1,10 @@
 /build
+*.swp
+gradle/ 
+.gradle
+gradlew
+gradlew.bat
+
+# idea
+.idea
+*.iml
