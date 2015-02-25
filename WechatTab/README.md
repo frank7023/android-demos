@@ -1,6 +1,6 @@
 ## 微信4.2版导航栏效果
 ## 1.效果
-![TabHost](http://fangjie-wordpress.stor.sinaapp.com/github/wechattab.gif "效果")
+![TabHost](http://fangjie-wordpress.stor.sinaapp.com/uploads/2014/10/wechattab.gif "效果")
 ## 2.讲解
 * ViewPager
 主界面内容显示区域采用ViewPager+Fragment实现，采用FragmentPageAdapter，adapter的内容是Fragment
