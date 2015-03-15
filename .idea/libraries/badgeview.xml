@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="badgeview">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/weixintab/libs/badgeview.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WechatTab/libs/badgeview.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
