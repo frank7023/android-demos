@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/FangJie/Develop/Android/Workspace/android-demos/weixintab/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/FangJie/Develop/Android/Workspace/android-demos/weixintab/build/intermediates/pre-dexed/debug/classes-68f7623401997a8e393f53035dceae728aee4871.jar" />
+    </item>
+    <item
+        jar="/Users/FangJie/Develop/Android/Workspace/android-demos/tabview/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/FangJie/Develop/Android/Workspace/android-demos/tabview/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-86d807c2ef237625bf4bca7d880b1709b29600cb.jar" />
+    </item>
+    <item
+        jar="/Users/FangJie/Develop/Android/Workspace/android-demos/weixintab/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/FangJie/Develop/Android/Workspace/android-demos/weixintab/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-f5bf241db42f5be6ec324c8b64443ba5fd5e032f.jar" />
+    </item>
+    <item
+        jar="/Users/FangJie/Develop/Android/ADT/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/FangJie/Develop/Android/Workspace/android-demos/weixintab/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-5313bebaf22cab3b3cb43c33188b6b93a6f14422.jar" />
+    </item>
+    <item
+        jar="/Users/FangJie/Develop/Android/Workspace/android-demos/tabview/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/FangJie/Develop/Android/Workspace/android-demos/tabview/build/intermediates/pre-dexed/debug/classes-855a0ef93132c42394f9dc60a8a2aeed00a25ecd.jar" />
+    </item>
+    <item
+        jar="/Users/FangJie/Develop/Android/Workspace/android-demos/weixintab/libs/badgeview.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f77b0850a8adcf49b273a8f29ba481612aaaa19f">
+        <dex dex="/Users/FangJie/Develop/Android/Workspace/android-demos/weixintab/build/intermediates/pre-dexed/debug/badgeview-298051e0d82b0ce671b4c936189b33ef0538c9ff.jar" />
+    </item>
+    <item
+        jar="/Users/FangJie/Develop/Android/Workspace/android-demos/tabview/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/FangJie/Develop/Android/Workspace/android-demos/tabview/build/intermediates/pre-dexed/debug/classes-6ce07fc95f0cb4cabf938e84e06192dc5a105038.jar" />
+    </item>
+    <item
+        jar="/Users/FangJie/Develop/Android/Workspace/android-demos/weixintab/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/FangJie/Develop/Android/Workspace/android-demos/weixintab/build/intermediates/pre-dexed/debug/classes-23ac2f102ecf6f126d252e0cdad004ffb1c3108e.jar" />
+    </item>
+
+</items>

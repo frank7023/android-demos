@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/android-demos.iml" filepath="$PROJECT_DIR$/android-demos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tabview/tabview.iml" filepath="$PROJECT_DIR$/tabview/tabview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weixintab/weixintab.iml" filepath="$PROJECT_DIR$/weixintab/weixintab.iml" />
+    </modules>
+  </component>
+</project>
+
