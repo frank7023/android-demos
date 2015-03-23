@@ -3,11 +3,11 @@
 
 1.[微信4.2导航栏切换效果](https://github.com/JayFang1993/android-demos/tree/master/WechatTab)-WechatTab
 
-<img src="/WechatTab/demo.gif" width="200" height="350"/>
+<img src="/WechatTab/demo.gif" width="250" height="400"/>
 
 2.[Fragment实现TabHost](https://github.com/JayFang1993/AndroidUtil/tree/master/TabHost)-TabHost
 
-
+<img src="/TabHost/demo.gif" width="250" height="400"/>
 
 
 

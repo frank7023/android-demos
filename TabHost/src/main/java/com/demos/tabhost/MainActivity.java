@@ -93,6 +93,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 } else{
                     transaction.show(IndexFragment);
                 }
+                mIvTab1.setImageResource(R.drawable.index_s);
+                mTvTab1.setTextColor(getResources().getColor(R.color.tab_text_press));
                 mRlTab1.setBackgroundColor(getResources().getColor(R.color.tab_select_back));
                 break;
             case 1:
@@ -104,6 +106,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 } else{
                     transaction.show(MagFragment);
                 }
+                mIvTab2.setImageResource(R.drawable.magzine_s);
+                mTvTab2.setTextColor(getResources().getColor(R.color.tab_text_press));
                 mRlTab2.setBackgroundColor(getResources().getColor(R.color.tab_select_back));
                 break;
             case 2:
@@ -115,6 +119,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 } else{
                     transaction.show(NewsFragment);
                 }
+                mIvTab3.setImageResource(R.drawable.picture_s);
+                mTvTab3.setTextColor(getResources().getColor(R.color.tab_text_press));
                 mRlTab3.setBackgroundColor(getResources().getColor(R.color.tab_select_back));
                 break;
             case 3:
@@ -126,6 +132,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 } else{
                     transaction.show(MeFragment);
                 }
+                mIvTab4.setImageResource(R.drawable.me_s);
+                mTvTab4.setTextColor(getResources().getColor(R.color.tab_text_press));
                 mRlTab4.setBackgroundColor(getResources().getColor(R.color.tab_select_back));
                 break;
             default:
@@ -141,6 +149,16 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         mRlTab2.setBackgroundColor(getResources().getColor(R.color.tab_back));
         mRlTab3.setBackgroundColor(getResources().getColor(R.color.tab_back));
         mRlTab4.setBackgroundColor(getResources().getColor(R.color.tab_back));
+
+        mIvTab1.setImageResource(R.drawable.index);
+        mIvTab2.setImageResource(R.drawable.magzine);
+        mIvTab3.setImageResource(R.drawable.picture);
+        mIvTab4.setImageResource(R.drawable.me);
+
+        mTvTab1.setTextColor(getResources().getColor(R.color.tab_text));
+        mTvTab2.setTextColor(getResources().getColor(R.color.tab_text));
+        mTvTab3.setTextColor(getResources().getColor(R.color.tab_text));
+        mTvTab4.setTextColor(getResources().getColor(R.color.tab_text));
     }
 
     private void hideTab(FragmentTransaction transaction){

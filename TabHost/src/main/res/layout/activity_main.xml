@@ -3,16 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="48dp" 
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:id="@+id/title"
-        android:text="底部Tab切换Demo"
-        android:textSize="18dp"
-        android:textColor="#a8aeb5"
-        android:typeface="monospace" />
+
+    <include layout="@layout/titlebar"
+        android:id="@+id/title"/>
 
 	<FrameLayout
 	     android:id="@+id/content"
