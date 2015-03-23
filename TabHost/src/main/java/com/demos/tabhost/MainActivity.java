@@ -1,68 +1,193 @@
 package com.demos.tabhost;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.Menu;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends FragmentActivity implements View.OnClickListener{
 
-    private FragmentManager fragmentManager;  
-    private RadioGroup radioGroup;
-    private RadioButton rb1;
+    private RelativeLayout mRlTab1,mRlTab2,mRlTab3,mRlTab4;
+    private ImageView mIvTab1,mIvTab2,mIvTab3,mIvTab4;
+    private TextView mTvTab1,mTvTab2,mTvTab3,mTvTab4;
+
+    private TextView mTv,mTv2;
+    private FragmentManager manager;
+    private Fragment IndexFragment,MagFragment,NewsFragment,MeFragment;
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-	    fragmentManager = getSupportFragmentManager();  
-	   	    	    
-	    radioGroup = (RadioGroup) findViewById(R.id.main_radio);  
-	    rb1=(RadioButton) findViewById(R.id.rb_home);
-	    radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {  
-
-	        @SuppressLint("NewApi")
-			public void onCheckedChanged(RadioGroup group, int checkedId) { 
-        	    rb1.setBackgroundDrawable(getResources().getDrawable(R.drawable.tabhost_bg_selector));
-	            FragmentTransaction transaction = fragmentManager.beginTransaction();  
-	            ContentFrame fragment = null;
-	            switch(checkedId)
-	            {
-	            	case 0:
-	            		fragment= new ContentFrame();
-	            		break;
-	            	case 1:
-	            		fragment= new ContentFrame();
-	            		break;
-	            	case 2:
-	            		fragment= new ContentFrame();
-	            		break;
-	            	case 3:
-	            		fragment= new ContentFrame();
-	            		break;	
-	            	default:
-	   
-	            		fragment= new ContentFrame();
-	            		break;
-	            }
-	            transaction.replace(R.id.content, (Fragment)fragment);  
-	            transaction.commit();  
-	        }
-	    });
-	    //����Ĭ��ѡ�е�һ��
-	    radioGroup.check(1);
-	    radioGroup.check(0);
-	    //rb1.setSelected(true);
-	    rb1.setBackgroundDrawable(getResources().getDrawable(R.drawable.tabhost_press));
+        initView();
+        initEvent();
 	}
-    
-	@Override
+
+    private void initView(){
+        mTv=(TextView)findViewById(R.id.title);
+        mRlTab1=(RelativeLayout)findViewById(R.id.rl_tab1);
+        mRlTab2=(RelativeLayout)findViewById(R.id.rl_tab2);
+        mRlTab3=(RelativeLayout)findViewById(R.id.rl_tab3);
+        mRlTab4=(RelativeLayout)findViewById(R.id.rl_tab4);
+
+        mTvTab1=(TextView)findViewById(R.id.tv_tab1);
+        mTvTab2=(TextView)findViewById(R.id.tv_tab2);
+        mTvTab3=(TextView)findViewById(R.id.tv_tab3);
+        mTvTab4=(TextView)findViewById(R.id.tv_tab4);
+
+        mIvTab1=(ImageView)findViewById(R.id.iv_tab1);
+        mIvTab2=(ImageView)findViewById(R.id.iv_tab2);
+        mIvTab3=(ImageView)findViewById(R.id.iv_tab3);
+        mIvTab4=(ImageView)findViewById(R.id.iv_tab4);
+
+    }
+
+    private void initEvent(){
+        mRlTab1.setOnClickListener(this);
+        mRlTab2.setOnClickListener(this);
+        mRlTab3.setOnClickListener(this);
+        mRlTab4.setOnClickListener(this);
+        mTv.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.rl_tab1:
+                setTabSelect(0);
+                break;
+            case R.id.rl_tab2:
+                setTabSelect(1);
+
+                break;
+            case R.id.rl_tab3:
+                setTabSelect(2);
+
+                break;
+            case R.id.rl_tab4:
+                setTabSelect(3);
+
+                break;
+            default:
+                break;
+        }
+    }
+
+
+    public void setTabSelect(int i) {
+        manager=getSupportFragmentManager();
+        FragmentTransaction transaction=manager.beginTransaction();
+
+        resetTab();
+        hideTab(transaction);
+        switch (i) {
+            case 0:
+//                IndexFragment=manager.findFragmentByTag("Tab1");
+                if (IndexFragment == null)
+                {
+                    IndexFragment = new IndexTabFragment();
+                    transaction.add(R.id.content, IndexFragment,"Tab1");
+                } else
+                {
+                    transaction.show(IndexFragment);
+//                    transaction.replace(R.id.content, IndexFragment);
+                }
+                mRlTab1.setBackgroundColor(getResources().getColor(R.color.tab_select_back));
+                break;
+            case 1:
+                if (MagFragment == null)
+                {
+                    MagFragment = new MagTabFragment();
+                    transaction.add(R.id.content, MagFragment);
+                } else
+                {
+                    transaction.show(MagFragment);
+//                    transaction.replace(R.id.content, MagFragment);
+                }
+                mRlTab2.setBackgroundColor(getResources().getColor(R.color.tab_select_back));
+                break;
+            case 2:
+                if (NewsFragment == null)
+                {
+                    NewsFragment = new NewsTabFragment();
+                    transaction.add(R.id.content, NewsFragment);
+                } else
+                {
+                    transaction.show(NewsFragment);
+//                    transaction.replace(R.id.content, NewsFragment);
+                }
+                mRlTab3.setBackgroundColor(getResources().getColor(R.color.tab_select_back));
+                break;
+            case 3:
+                if (MeFragment == null)
+                {
+                    MeFragment = new MeTabFragment();
+                    transaction.add(R.id.content, MeFragment);
+                } else
+                {
+                    transaction.show(MeFragment);
+//                    transaction.replace(R.id.content, MeFragment);
+                }
+                mRlTab4.setBackgroundColor(getResources().getColor(R.color.tab_select_back));
+                break;
+            default:
+
+                break;
+        }
+        transaction.commit();
+
+    }
+
+    private void resetTab(){
+        mRlTab1.setBackgroundColor(getResources().getColor(R.color.tab_back));
+        mRlTab2.setBackgroundColor(getResources().getColor(R.color.tab_back));
+        mRlTab3.setBackgroundColor(getResources().getColor(R.color.tab_back));
+        mRlTab4.setBackgroundColor(getResources().getColor(R.color.tab_back));
+    }
+
+    private void hideTab(FragmentTransaction transaction){
+        if (IndexFragment != null)
+        {
+            transaction.hide(IndexFragment);
+        }
+        if (MagFragment != null)
+        {
+            transaction.hide(MagFragment);
+        }
+        if (NewsFragment != null)
+        {
+            transaction.hide(NewsFragment);
+        }
+        if (MeFragment != null)
+        {
+            transaction.hide(MeFragment);
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        IndexFragment=null;
+//        System.gc();
+        Log.i("fangjie", "IndexFragment destory");
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setTabSelect(0);
+    }
+
+    @Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
