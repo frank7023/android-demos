@@ -18,7 +18,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private ImageView mIvTab1,mIvTab2,mIvTab3,mIvTab4;
     private TextView mTvTab1,mTvTab2,mTvTab3,mTvTab4;
 
-    private TextView mTv,mTv2;
     private FragmentManager manager;
     private Fragment IndexFragment,MagFragment,NewsFragment,MeFragment;
     
@@ -32,7 +31,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 	}
 
     private void initView(){
-        mTv=(TextView)findViewById(R.id.title);
         mRlTab1=(RelativeLayout)findViewById(R.id.rl_tab1);
         mRlTab2=(RelativeLayout)findViewById(R.id.rl_tab2);
         mRlTab3=(RelativeLayout)findViewById(R.id.rl_tab3);
@@ -55,7 +53,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         mRlTab2.setOnClickListener(this);
         mRlTab3.setOnClickListener(this);
         mRlTab4.setOnClickListener(this);
-        mTv.setOnClickListener(this);
     }
 
     @Override
@@ -74,7 +71,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 break;
             case R.id.rl_tab4:
                 setTabSelect(3);
-
                 break;
             default:
                 break;
@@ -83,58 +79,52 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
 
     public void setTabSelect(int i) {
-        manager=getSupportFragmentManager();
+        FragmentManager manager=getSupportFragmentManager();
         FragmentTransaction transaction=manager.beginTransaction();
 
         resetTab();
-        hideTab(transaction);
         switch (i) {
             case 0:
-//                IndexFragment=manager.findFragmentByTag("Tab1");
-                if (IndexFragment == null)
-                {
+                IndexFragment=manager.findFragmentByTag("TAG1");
+                hideTab(transaction);
+                if (IndexFragment == null){
                     IndexFragment = new IndexTabFragment();
-                    transaction.add(R.id.content, IndexFragment,"Tab1");
-                } else
-                {
+                    transaction.add(R.id.content, IndexFragment,"TAG1");
+                } else{
                     transaction.show(IndexFragment);
-//                    transaction.replace(R.id.content, IndexFragment);
                 }
                 mRlTab1.setBackgroundColor(getResources().getColor(R.color.tab_select_back));
                 break;
             case 1:
-                if (MagFragment == null)
-                {
+                MagFragment=manager.findFragmentByTag("TAG2");
+                hideTab(transaction);
+                if (MagFragment == null){
                     MagFragment = new MagTabFragment();
-                    transaction.add(R.id.content, MagFragment);
-                } else
-                {
+                    transaction.add(R.id.content, MagFragment,"TAG2");
+                } else{
                     transaction.show(MagFragment);
-//                    transaction.replace(R.id.content, MagFragment);
                 }
                 mRlTab2.setBackgroundColor(getResources().getColor(R.color.tab_select_back));
                 break;
             case 2:
-                if (NewsFragment == null)
-                {
+                NewsFragment=manager.findFragmentByTag("TAG3");
+                hideTab(transaction);
+                if (NewsFragment == null){
                     NewsFragment = new NewsTabFragment();
-                    transaction.add(R.id.content, NewsFragment);
-                } else
-                {
+                    transaction.add(R.id.content, NewsFragment,"TAG3");
+                } else{
                     transaction.show(NewsFragment);
-//                    transaction.replace(R.id.content, NewsFragment);
                 }
                 mRlTab3.setBackgroundColor(getResources().getColor(R.color.tab_select_back));
                 break;
             case 3:
-                if (MeFragment == null)
-                {
+                MeFragment=manager.findFragmentByTag("TAG4");
+                hideTab(transaction);
+                if (MeFragment == null){
                     MeFragment = new MeTabFragment();
-                    transaction.add(R.id.content, MeFragment);
-                } else
-                {
+                    transaction.add(R.id.content, MeFragment,"TAG4");
+                } else{
                     transaction.show(MeFragment);
-//                    transaction.replace(R.id.content, MeFragment);
                 }
                 mRlTab4.setBackgroundColor(getResources().getColor(R.color.tab_select_back));
                 break;
@@ -176,7 +166,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     protected void onPause() {
         super.onPause();
         IndexFragment=null;
-//        System.gc();
         Log.i("fangjie", "IndexFragment destory");
 
     }
