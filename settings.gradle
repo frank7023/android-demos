@@ -1,1 +1,1 @@
-include ':WechatTab', ':TabHost', ':MaterailDemo', ':CustomView'
+include ':WechatTab', ':TabHost'

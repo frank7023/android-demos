@@ -28,6 +28,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
         initView();
         initEvent();
+
+        setTabSelect(0);
 	}
 
     private void initView(){
@@ -93,6 +95,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 } else{
                     transaction.show(IndexFragment);
                 }
+                Log.i("MainActivity","IndexFragment:"+IndexFragment.toString());
                 mIvTab1.setImageResource(R.drawable.index_s);
                 mTvTab1.setTextColor(getResources().getColor(R.color.tab_text_press));
                 mRlTab1.setBackgroundColor(getResources().getColor(R.color.tab_select_back));
@@ -106,6 +109,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 } else{
                     transaction.show(MagFragment);
                 }
+                Log.i("MainActivity","MagFragment:"+MagFragment.toString());
                 mIvTab2.setImageResource(R.drawable.magzine_s);
                 mTvTab2.setTextColor(getResources().getColor(R.color.tab_text_press));
                 mRlTab2.setBackgroundColor(getResources().getColor(R.color.tab_select_back));
@@ -119,6 +123,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 } else{
                     transaction.show(NewsFragment);
                 }
+                Log.i("MainActivity","NewsFragment:"+NewsFragment.toString());
                 mIvTab3.setImageResource(R.drawable.picture_s);
                 mTvTab3.setTextColor(getResources().getColor(R.color.tab_text_press));
                 mRlTab3.setBackgroundColor(getResources().getColor(R.color.tab_select_back));
@@ -132,6 +137,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 } else{
                     transaction.show(MeFragment);
                 }
+                Log.i("MainActivity","MeFragment:"+MeFragment.toString());
                 mIvTab4.setImageResource(R.drawable.me_s);
                 mTvTab4.setTextColor(getResources().getColor(R.color.tab_text_press));
                 mRlTab4.setBackgroundColor(getResources().getColor(R.color.tab_select_back));
@@ -183,15 +189,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     @Override
     protected void onPause() {
         super.onPause();
-        IndexFragment=null;
-        Log.i("fangjie", "IndexFragment destory");
-
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        setTabSelect(0);
     }
 
     @Override

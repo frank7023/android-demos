@@ -5,11 +5,10 @@
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="1.7" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/CustomView" />
-            <option value="$PROJECT_DIR$/MaterailDemo" />
             <option value="$PROJECT_DIR$/TabHost" />
             <option value="$PROJECT_DIR$/WechatTab" />
           </set>
@@ -18,4 +17,3 @@
     </option>
   </component>
 </project>
-
