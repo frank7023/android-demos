@@ -187,8 +187,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     }
 
     @Override
-    protected void onPause() {
-        super.onPause();
+    protected void onSaveInstanceState(Bundle outState) {
+//        super.onSaveInstanceState(outState);
     }
 
     @Override
